@@ -2,6 +2,10 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.ts',
+  externals: {
+    '@tensorflow/tfjs': 'window.tf',
+    '@tensorflow/tfjs-vis': 'window.tfvis',
+  },
   module: {
     rules: [
       {
